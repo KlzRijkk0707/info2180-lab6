@@ -17,13 +17,6 @@ function request() {
 
 window.onload = function{
     $("#btn").onclick = function{
-        //request() ;
-        var httpRequest = new XMLHttpRequest();
-        var url = "https://info2180-lab6-rijkaa.c9users.io/request.php?q=rick";
-
-        httpRequest.onreadystatechange = doSomething;
-        httpRequest.open('GET', url);
-        httpRequest.send();
-
+        window.alert(request()) ;
     };
 };
