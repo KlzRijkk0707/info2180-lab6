@@ -12,7 +12,15 @@ $definition = [
     "css" => "A style sheet language used for describing the presentation of a document written in a markup language.",
     "javascript" => "A lightweight, interpreted programming language with first-class functions that adds interactivity to your website.",
     "php" => "A server-side scripting language, and a powerful tool for making dynamic and interactive websites",
+    "rick" => "the realest genna genna",
 ];
+
+$query2 = $_GET['&'];
+if ($query="" && $query2 = true){
+    print "<h3>" . strtoupper($query2) . "</h3>";
+    print "<p>" . $definition . "</p>";
+    
+}
 
 print "<h3>" . strtoupper($query) . "</h3>";
 print "<p>" . $definition[$query] . "</p>";
