@@ -15,7 +15,7 @@ function loadDef() {
         if (this.readyState == 4 && this.status == 200) {
             var result = httpRequest.responseText;
             //main.innerHTML = result;
-            //window.alert(result);
+            window.alert(result);
             window.location.href= url ;
             console.log(result);
             
