@@ -20,9 +20,6 @@ function loadDef() {
         if (this.readyState == 4 && this.status == 200) {
             var result = httpRequest.responseText;
             main.innerHTML = result;
-            //window.alert(result);
-           // window.location.href= url ;
-           
             
         }
     };
@@ -38,27 +35,45 @@ function loadDef() {
 window.onload = function() {
 
     var btn = document.getElementById('btn');
+    var btn2= document.getElementById('btn2');
+    
     console.log(document.getElementById('btn'));
+    console.log(document.getElementById('btn2'));
+    
     btn.onclick = function () {
-        //console.log('l;,;,');
         loadDef();
-       // console.log('l439570ueoj,');
+    };
+    
+    btn2.onclick = function () {
+        loadAll();
+    };
+};
+
+function loadAll(){
+    console.log(this);
+    
+    var httpRequest = new XMLHttpRequest();
+    var all = '&all =true';
+    var url = "https://info2180-lab6-rijkaa.c9users.io/request.php?q="+all;
+    var main = document.getElementById('holder2');
+    
+    httpRequest.open('GET', url);
+    httpRequest.send();
+    
+    console.log(url);
+    
+    httpRequest.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            
+            main.append('<ol id="tbl"></ol>');
+            var tbl = document.getElementById('tbl');
+            
+            var result = httpRequest.responseText;
+            
+            for(var i=0; i < result.length; i++){
+                tbl.append('<tr><td>'+result[i]+'</td></tr>');
+                
+            }
+        }
     };
 }
-
-
-
-/*
- httpRequest.onreadystatechange = function () {
-        console.log(this.status);
-        console.log(this.readyState);
-        if (this.readyState == 4 && this.status == 200) {
-
-            document.getElementById("main").innerHTML = this.responseText;
-
-         }
-
-
-    };
-
- */
