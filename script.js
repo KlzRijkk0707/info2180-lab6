@@ -5,19 +5,24 @@
 
 function loadDef() {
     var httpRequest = new XMLHttpRequest(); 
-    var url = "https://info2180-lab6-rijkaa.c9users.io/request.php?q=rick";
+    var url = "https://info2180-lab6-rijkaa.c9users.io/request.php?q=";
     var main = document.getElementById('main');
-    console.log(httpRequest);
-    httpRequest.open('GET', url);
+    var text = document.forms["dict"]["word"].value;
+    var url2 =url+text;
+    
+    httpRequest.open('GET', url2);
     httpRequest.send();
+    
     console.log(httpRequest);
+    console.log(text);
+    
     httpRequest.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var result = httpRequest.responseText;
-            //main.innerHTML = result;
-            window.alert(result);
-            window.location.href= url ;
-            console.log(result);
+            main.innerHTML = result;
+            //window.alert(result);
+           // window.location.href= url ;
+           
             
         }
     };
