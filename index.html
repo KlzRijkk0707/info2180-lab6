@@ -4,19 +4,39 @@
 <head>
     <meta charset="utf-8" />
     <title>info2180-lab6</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
     <script src="script.js" type="text/javascript"></script>
 </head>
+
+<header>
+    <div class="header">
+        <h1> THE GREAT DICTIONARY</h1> 
+    </div>
+</header>
+
 <body>
-    <div>
-        <h3>Enter word then press the button</h3>
-        <form name="dict">
-            enter word: <br/>
-            <input type="text" name="word"><br>
-        </form>
+    
+    <div class="holder1">
+        <div>
+            <p>created by the greates ever to nothing with</p> 
+        </div>
         
-        <button id="btn" type="button">Click Me!</button>
-        <h2 id="main"></h2>
+        <div>
+            <h3>Enter word then press 'Submit Search' to search for A word or click 'All Defintions' for all definitions available</h3>
+            <form name="dict">
+                enter word: <br/>
+                <input type="text" name="word"><br/>
+                <button id="btn" type="button">Submit Search</button>
+                <button id="btn2" type="button">All Defenitions</button>
+            </form>
+        </div>
+        
+        <div class="holder2">
+            <h1>RESULT</h1>
+            <h2 id="main"></h2>
+        </div>
+        
     </div>
 </body>
 </html>
