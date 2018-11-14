@@ -1,0 +1,23 @@
+body{
+    border: 3em;
+    background-color: rgb(60, 60, 60);
+}
+
+header{
+    margin: 0.5em;
+    background-color: blue;
+    
+}
+
+.holder1{
+    margin-top: 0;
+    margin: 2em;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+}
+
+.holder2{
+    
+    background-color: blue;
+    text-align: center;
+}
