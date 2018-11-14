@@ -9,14 +9,14 @@ header{
     
 }
 
-.holder1{
+#holder1{
     margin-top: 0;
     margin: 2em;
     background-color: rgb(180, 180, 180);
     text-align: center;
 }
 
-.holder2{
+#holder2{
     
     background-color: blue;
     text-align: center;
